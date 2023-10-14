@@ -1,31 +1,54 @@
 <html>
 <head>
 <style>
+body, html {
+    height: 100%; /* Make sure the body takes the full height */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    /* Use Flexbox to organize content vertically */
+    display: flex;
+    flex-direction: column;
+    /* background image */
+    background-image: url('https://images.unsplash.com/photo-1544640808-32ca72ac7f37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 header {
-    background-color:black;
-    color:white;
-    text-align:center;
-    padding:5px;	 
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }
+
+.content {
+    display: flex;
+}
+
 nav {
-    line-height:30px;
-    background-color:#eeeeee;
-    height:300px;
-    width:100px;
-    float:left;
-    padding:5px;	      
+    line-height: 30px;
+    background-color: #D2B48C;
+    height: 50px;
+    width: 100px;
+    padding: 5px;
 }
+
 section {
-    width:350px;
-    float:left;
-    padding:10px;	 	 
+    width: 300px;
+    padding: 20px; /* Increased padding for better visual appearance */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
 }
+
 footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px;	 	 
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: auto; /* Push the footer to the bottom */
 }
 </style>
 </head>
@@ -46,7 +69,7 @@ footer {
 	<form action="SimpleFormInsert" method="POST">
 	
 		Title: <input type="text" name="title"> <br />
-		ISBN: <input type="text" name="isbn"> <br />
+		ISBN: <input type="text" name="isbn"></ <br> <br> (Max 13 digits. No dashes permitted.) <br />
 		Author Name: <input type="text" name="author_name"> <br />
 		Genre: <input type="text" name="genre"> <br />
 		Reading Status: 
@@ -64,7 +87,7 @@ footer {
 </section>
 
 <footer>
-Copyright
+&#169; Copyright Mark Lopez 2023
 </footer>
 </body>
 </html>
